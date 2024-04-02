@@ -39,7 +39,7 @@
 
 @push('scripts')
 {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
-{{-- 
+
     <script>
         $(document).ready(function() {
             $('body').on('click', '.change-status', function() {
@@ -47,7 +47,7 @@
                 let id = $(this).data('id');
 
                 $.ajax({
-                    url: "{{route('admin.subcategory.change-status')}}",
+                    url: "{{route('admin.childcategory.change-status')}}",
                     method: 'PUT',
                     data: {
                         status: isChecked,
@@ -63,5 +63,5 @@
 
             })
         })
-    </script> --}}
+    </script>
 @endpush
